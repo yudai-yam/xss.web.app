@@ -1,0 +1,44 @@
+name: TEST-AND-QUALITY-CHECK
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+defaults:
+  run:
+    shell: bash
+    working-directory: . # Adjust this if you change your project structure
+
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
+        uses: actions/setup-python@v5
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.11'
+
+      - name: Upgrade pip
+        run: python3 -m pip install --upgrade pip
+
+      - name: Install Dependencies
+        run: pip install -e .[dev]
+
+      - name: Run black
+        run: tox -e black
+
+      - name: Run flake8
+        run: tox -e flake8
+
+      - name: Run isort
+        run: tox -e isort
