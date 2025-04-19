@@ -1,7 +1,9 @@
+/*
+simple javascript injection in innerHTML vulnerability
 
-let username
-
+example: <img src="x" onerror="alert('XSS')">
+*/
 document.getElementById("submit").onclick = function(){
-    username = document.getElementById("input").value;
-    console.log(username)
+    var username = document.getElementById("input").value;
+    document.getElementById("target").innerHTML = username
 }
