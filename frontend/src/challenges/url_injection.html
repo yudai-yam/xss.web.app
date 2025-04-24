@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>URL Injection</title>
 </head>
 <body>
-    
+    <h1 id="main_header">URL Injection</h1>
+
+    <p>You can send a GET request via ?request=</p>
+
+    <p>Your request: </p>
+
+    <div id="app">
+    </div>
+
+    <button id="toggle_examples">Toggle Examples</button>
+    <div id="examples">
+        <p>
+            example: &lt;img src="x" onerror="alert('XSS')"&gt;
+        </p>
+    </div>
+
+
+    <script type="module">
+        import { setup_show_hide } from '../utils/show_hide.js';
+        setup_show_hide('examples', 'toggle_examples');
+    </script>
+    <script src="scripts/url_injection.js"></script>
 </body>
 </html> 
