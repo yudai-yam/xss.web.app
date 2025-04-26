@@ -3,7 +3,7 @@
  * @param {string} elementId - The ID of the element to show/hide
  * @param {string} buttonId - The ID of the button that triggers the show/hide
  */
-export function setup_show_hide(element_id, button_id) {
+function setup_show_hide(element_id, button_id) {
     const element = document.getElementById(element_id);
     const button = document.getElementById(button_id);
     
@@ -20,3 +20,5 @@ export function setup_show_hide(element_id, button_id) {
         element.style.display = element.style.display === 'none' ? 'block' : 'none';
     });
 } 
+
+setup_show_hide('examples', 'toggle_examples');

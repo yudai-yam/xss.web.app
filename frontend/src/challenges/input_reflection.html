@@ -2,9 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Input Relection</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Relection</title>
+    <script src="scripts/input_reflection.js"></script>
 </head>
 <body>
     <h1 id="main_header">Input Reflection</h1>
@@ -25,11 +26,6 @@
             example: &lt;img src="x" onerror="alert('XSS')"&gt;
         </p>
     </div>
-
-    <script type="module">
-        import { setup_show_hide } from '../utils/show_hide.js';
-        setup_show_hide('examples', 'toggle_examples');
-    </script>
-    <script src="scripts/input_reflection.js"></script>
+    <script src="../utils/show_hide.js"></script>
 </body>
 </html> 
