@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>JQuery Mobile Gadget</title>
+    <title>JQuery Mobile Gadget (Eval)</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -24,7 +24,7 @@
         <p>example: &lt;div id="expression" data="alert(1)"&gt;&lt;/div&gt;</p>
         <p>note: you might need to encode it</p>
     </div>
-    <script src="../utils/show_hide.js"></script>
-    <script src="scripts/jquery_mobile.js"></script>
+    <script src="../../utils/show-hide.js"></script>
+    <script src="scripts/jqm-eval.js"></script>
 </body>
 </html>

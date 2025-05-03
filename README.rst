@@ -4,6 +4,10 @@ Advanced XSS Web Application Readme
 .. contents:: :local:
 
 
+Note
+----
+This repository is currently work in progress
+
 Background
 ----------
 This repository stores the whole architecture for a web application tailored for
