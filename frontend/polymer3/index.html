@@ -37,7 +37,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     -->
 
     <h1>Start Polymer 3.0</h1>
-    <p>You can send a GET request via ?request=</p>
+    <p>You can make use of the hash element in URL...</p>
     <p id="jsyes"></p>
     <script type="text/javascript">
       document.getElementById('jsyes').innerHTML='Loading...'
@@ -46,5 +46,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <p>Could not render the custom element. Check that JavaScript is enabled.</p>
     </noscript>
   </start-polymer3>
+  <br><br>
+  <button id="toggle_examples">Toggle Examples</button>
+  <div id="examples">
+      <p>
+          example: #&lt;demo-element inner-h-t-m-l="&lt;img src=x onerror=alert('XSS')&gt"&gt;&lt;/demo-element&gt;
+          <demo-element inner-h-t-m-l='<img src=x onerror=alert(1)'></demo-element>
+      </p>
+  </div>
+
+  <script src="../../utils/show-hide.js"></script>
 </body>
 </html>
