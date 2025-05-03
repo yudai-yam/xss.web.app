@@ -30,7 +30,7 @@ Different server is required for each different framework to work properly.
 
         php -S 127.0.0.1:8000
 
-- Polymer: polymer serve -H 127.0.0.1 -p 8001
+- Polymer:
 
     .. code-block::
 
