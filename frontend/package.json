@@ -1,1 +1,11 @@
- 
+{
+  "name": "xss.web.app",
+  "version": "1.0.0",
+  "main": "src/start-polymer3.js",
+  "repository": "https://github.com/yudai-yam/xss.web.app/tree/master/frontend",
+  "author": "Yudai Yamase",
+  "dependencies": {},
+  "scripts": {
+    "postinstall": "cd start-polymer3 && npm install"
+  }
+}
