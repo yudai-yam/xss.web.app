@@ -17,12 +17,15 @@ Installation
 ^^^^^^^^^^^^
 
 .. code-block::
-    
+
     npm install
 
 Server Setups
 ^^^^^^^^^^^^^
 Different server is required for each different framework to work properly.
 
-- No Framework: php -S 127.0.0.1:8000
+- No Framework:
+    .. code-block::
+
+        php -S 127.0.0.1:8000
 - Polymer: polymer serve -H 127.0.0.1 -p 8001
