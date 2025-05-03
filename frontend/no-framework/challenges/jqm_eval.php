@@ -24,7 +24,7 @@
         <p>example: &lt;div id="expression" data="alert(1)"&gt;&lt;/div&gt;</p>
         <p>note: you might need to encode it</p>
     </div>
-    <script src="../utils/show-hide.js"></script>
+    <script src="../../utils/show-hide.js"></script>
     <script src="scripts/jqm-eval.js"></script>
 </body>
 </html>
