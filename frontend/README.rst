@@ -25,7 +25,12 @@ Server Setups
 Different server is required for each different framework to work properly.
 
 - No Framework:
+
     .. code-block::
 
         php -S 127.0.0.1:8000
 - Polymer: polymer serve -H 127.0.0.1 -p 8001
+    .. code-block::
+
+        polymer serve -H 127.0.0.1 -p 8001
+ 
