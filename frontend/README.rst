@@ -42,7 +42,7 @@ Make sure your current path is under the frontend directory.
         polymer serve -H 127.0.0.1 -p 8001
  
 
-Challgenes
+Challenges
 ----------
 It contains several XSS challenges that give you hands-on experiences!
 
@@ -66,6 +66,9 @@ It works in JQuery Mobile version <= 1.3.2.
 
 Polymer Camel Case Conversion Gadget 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+It exploits the camel case conversion feature implemented in Polymer framework by default.
+This page is run on Polymer server in another port. 
 
-Jquery Element Creation Gadget
+JQuery Element Creation Gadget
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+It exploits an element creation gadget in JQuery
