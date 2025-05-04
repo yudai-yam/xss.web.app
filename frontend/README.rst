@@ -15,6 +15,7 @@ to enjoy this application!
 
 Installation
 ^^^^^^^^^^^^
+Run the command below to install the dependencies.
 
 .. code-block::
 
@@ -44,31 +45,31 @@ Make sure your current path is under the frontend directory.
 
 Challenges
 ----------
-It contains several XSS challenges that give you hands-on experiences!
+* It contains several XSS challenges that give you hands-on experiences!
 
 Input Reflection
 ^^^^^^^^^^^^^^^^^^
-It is one of the simplest XSS. Payload can be injected in the input box. No CSP implemented.
+* It is one of the simplest XSS. Payload can be injected in the input box. No CSP implemented.
 
 URL Injection
 ^^^^^^^^^^^^^
-It is another piece of simple XSS.
+* It is another piece of simple XSS.
 Can be triggered by injecting a payload into the URL. No CSP implemented.
 
 JQuery Mobile Gadget (Eval)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-It is an explotation of eval() in Jquery Mobile. This is allowed in the CSP! 
+* It is an explotation of eval() in Jquery Mobile. This is allowed in the CSP! 
 
 JQuery Mobile Gadget (Popup)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-It makes use of the known popup gadget in JQuery Mobile.
+* It makes use of the known popup gadget in JQuery Mobile.
 It works in JQuery Mobile version <= 1.3.2.  
 
 Polymer Camel Case Conversion Gadget 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-It exploits the camel case conversion feature implemented in Polymer framework by default.
+* It exploits the camel case conversion feature implemented in Polymer framework by default.
 This page is run on Polymer server in another port. 
 
 JQuery Element Creation Gadget
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-It exploits an element creation gadget in JQuery
+* It exploits an element creation gadget in JQuery

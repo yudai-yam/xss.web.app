@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+    <h1 id="main_header">JQuery Element Creation Gadget</h1>
     <p>Make use of known gadgets in JQuery!</p>
     <p>Your input</p>
     <p id="app"></p>

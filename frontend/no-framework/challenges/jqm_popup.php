@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+    <h1 id="main_header">JQuery Mobile Popup Gadget</h1>
     <p>Make use of known gadgets in JQuery Mobile!</p>
     <p>Note that this only works for JQuery Mobile older than 1.3.2</p>
     <p>Your input</p>

@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 </head>
 <body>
+    <h1 id="main_header">JQuery Mobile Eval Gadget</h1>
     <p>Make use of known gadgets in JQuery Mobile!</p>
     <p>Your input</p>
     <p id="app"></p>
