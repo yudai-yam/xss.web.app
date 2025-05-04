@@ -41,3 +41,19 @@ Make sure your current path is under the frontend directory.
 
         polymer serve -H 127.0.0.1 -p 8001
  
+
+Challgenes
+----------
+It contains several XSS challenges that give you hands-on experiences!
+
+- Input Reflection
+It is one of the simplest XSS. No CSP implemented.
+
+- URL Injection
+It is another piece of simple XSS. No CSP implemented.
+
+- Jquery Mobile Gadget (Eval)
+Some explanation
+- Jquery Mobile Gadget (Popup)
+- Polymer Camel Case Conversion Gadget 
+- Jquery Element Creation Gadget
