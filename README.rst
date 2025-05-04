@@ -19,6 +19,6 @@ Architecture
 It comprises various components. The diagram for the whole architecture of
 the web applicaiton is shown in the image below.
 
-.. image:: architecture.png
+.. image:: images/architecture.png
     :width: 800
 

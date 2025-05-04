@@ -23,6 +23,11 @@ Installation
 Server Setups
 ^^^^^^^^^^^^^
 Different server is required for each different framework to work properly.
+Make sure your current path is under the frontend directory.
+
+.. code-block::
+
+    cd frontend
 
 - No Framework:
 
