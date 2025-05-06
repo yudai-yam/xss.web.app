@@ -13,7 +13,6 @@
 <body>
     <h1 id="main_header">eval() Sink Gadget</h1>
 
-    <p>jQuery.html</p>
     <div>
         <label>username: </label>
         <input id="input">
@@ -25,12 +24,13 @@
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
+        <h3>dummy</h3>
         <p>hint: You can put anything with id=expression and attribute=data</p>
         <p>example: &lt;img src=x onerror=alert(1)&gt;</p>
         <p>note: you might need to encode it</p>
     </div>
 
     <script src="../../utils/show-hide.js"></script>
-    <script src="scripts/sink_gadgets/eval-gadget.js"></script>
+    <script src="../scripts/sink_gadgets/eval-gadget.js"></script>
 </body>
 </html>
