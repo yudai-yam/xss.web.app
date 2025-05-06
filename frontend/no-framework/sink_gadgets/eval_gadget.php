@@ -5,25 +5,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Element Creation Gadget</title>
+    <title>eval() Sink Gadget</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <p>Make use of known gadgets in JQuery!</p>
-    <p>Your input</p>
-    <p id="app"></p>
+    <h1 id="main_header">eval() Sink Gadget</h1>
+
+    <div>
+        <label>username: </label>
+        <input id="input">
+        <button id="submit">Submit</button>
+    </div>
+
+    <h3>your input: </h3>
+    <p id="target"></p>
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
-        <p>dummy for now</p>
-        <p>hint: You can put anything with id=expression and attribute=data</p>
-        <p>example: &lt;div id="expression" data="alert(1)"&gt;&lt;/div&gt;</p>
+        <p>alert(1)</p>
         <p>note: you might need to encode it</p>
     </div>
+
     <script src="../../utils/show-hide.js"></script>
-    <script src="scripts/jqm-eval.js"></script>
+    <script src="../scripts/sink_gadgets/eval-gadget.js"></script>
 </body>
 </html>
