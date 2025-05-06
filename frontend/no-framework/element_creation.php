@@ -1,5 +1,5 @@
 <?php 
-    // header("Content-Security-Policy: script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'none';");
+    header("Content-Security-Policy: script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'none';");
 ?>
 
 <!DOCTYPE html>
@@ -37,9 +37,8 @@
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
-        <p>dummy for now</p>
         <p>hint: You can put anything with id=expression and attribute=data</p>
-        <p>example: &lt;div id="expression" data="alert(1)"&gt;&lt;/div&gt;</p>
+        <p>example: &lt;img src=x onerror=alert(1)&gt;</p>
         <p>note: you might need to encode it</p>
     </div>
     <script src="../utils/show-hide.js"></script>

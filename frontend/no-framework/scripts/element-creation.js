@@ -16,3 +16,5 @@ $(document).ready(function() {
     }
   });
 });
+
+// TODO It does not work when CSP is enabled.
