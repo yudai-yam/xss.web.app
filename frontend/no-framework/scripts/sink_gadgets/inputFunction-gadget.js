@@ -7,6 +7,7 @@ document.getElementById("submit").onclick = function(){
     // Vulnerable code: directly appending user input without sanitization
     element.innerHTML = para;
     
+    
     // Append the element to the document body
     document.body.appendChild(element);
 }

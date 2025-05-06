@@ -1,5 +1,5 @@
 <?php 
-    header("Content-Security-Policy: script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'none';");
+    header("Content-Security-Policy: script-src 'self' https://ajax.googleapis.com 'unsafe-inline'; object-src 'none';");
 ?>
 
 <!DOCTYPE html>
