@@ -24,9 +24,7 @@
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
-        <h3>dummy</h3>
-        <p>hint: You can put anything with id=expression and attribute=data</p>
-        <p>example: &lt;img src=x onerror=alert(1)&gt;</p>
+        <p>alert(1)</p>
         <p>note: you might need to encode it</p>
     </div>
 
