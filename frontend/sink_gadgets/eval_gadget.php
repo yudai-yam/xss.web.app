@@ -28,7 +28,7 @@
         <p>note: you might need to encode it</p>
     </div>
 
-    <script src="../../utils/show-hide.js"></script>
-    <script src="../scripts/sink_gadgets/eval-gadget.js"></script>
+    <script src="../utils/show-hide.js"></script>
+    <script src="./eval-gadget.js"></script>
 </body>
 </html>
