@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mXSS Demo</title>
+</head>
+<body>
+    <h2 id="title">Mutation XSS lab</h2>
+    <input type="text" id="userInput" placeholder="Enter HTML...">
+    <button onclick="changeContent()">Submit</button>
+
+    <div id="output"></div>
+
+    <script>
+        function changeContent() {
+            const userInput = document.getElementById("userInput").value;
+            document.getElementById("output").innerHTML = userInput;
+        }
+    </script>
+    <button id="toggle_examples">Toggle Examples</button>
+    <div id="examples">
+        <p>
+            example:&lt;body&gt;&lt;title&gt;&lt;p id=&quot;&lt;/title&gt;&lt;img src onerror=alert()&gt;&quot;&gt;&lt;/title&gt;
+        </p>
+    </div>
+
+    <script src="../utils/show-hide.js"></script>
+</body>
+</html>
