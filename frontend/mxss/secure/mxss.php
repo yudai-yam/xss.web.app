@@ -6,7 +6,6 @@
 </head>
 <body>
     <h2 id="title">Mutation XSS lab</h2>
-    
     <p>
         <strong>What is Mutation XSS?</strong>
     </p>
@@ -37,3 +36,4 @@
     <script src="../../utils/show-hide.js"></script>
 </body>
 </html>
+
