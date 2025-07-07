@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>HTML5 postMessage Lab</title>
+		<meta name="description" content="A game to demonstrate the HTML5 postMessage() function.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+		<meta charset="utf-8"> 
+	</head>
+	<body data-new-gr-c-s-check-loaded="8.931.0" data-gr-ext-installed="">
+		<h1>HTML5 postMessage Lab - Game Client</h1>
+		<p>
+			<strong>What is postMessage XSS?</strong>
+		</p>
+		<p>
+			postMessage XSS is a vulnerability that occurs when untrusted messages received via window.postMessage are used in the DOM without validating the sender's origin
+			or sanitizing the message content, allowing attackers to execute malicious scripts.
+		</p>
+
+		<h2>Hints</h2>
+		<div>
+			<ol id="hints"></ol>
+			<input id="addHint" type="button" value="Next Hint">
+		</div>
+		<hr>
+		<div id="set_username">
+			<label for="username">Enter your username:</label>
+            <input type="text" id="username" name="username" value="">
+			<input type="button" value="Set" id="setUsername">
+		</div>
+
+		<div id="game" style="display: none;">
+			<h2 id="welcome">x</h2>
+			<p>
+				I'm thinking of a number between 1 and 10, see if you can guess it.
+			</p>
+			<p>
+				<span id="result"></span><br>
+				<label for="guess">Guess:</label> <input value="" id="guess" name="guess">
+				<input type="button" id="checkGuess" value="Check it">
+			</p>
+		</div>
+
+		<hr>
+    	<button id="switch-version">Switch to Insecure Version</button>
+		<script src="./config.js"></script>
+		<script src="./main.js"></script>
+		<script src="./hints.js"></script>
+    	<script src="../../utils/switch-page.js"></script>
+	</body>
+</html>

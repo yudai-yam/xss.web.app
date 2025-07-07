@@ -20,7 +20,8 @@
     <script>
         function changeContent() {
             const userInput = document.getElementById("userInput").value;
-            document.getElementById("output").innerHTML = userInput;
+            const cleanUserInput = DOMPurify.sanitize(userInput)
+            document.getElementById("output").innerHTML = cleanUserInput;
         }
     </script>
     <button id="toggle_examples">Toggle Examples</button>
@@ -31,7 +32,7 @@
     </div>
 
     <button id="switch-version">Switch to Insecure Version</button>
-    <!-- <script src=" https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script> -->
+    <script src=" https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script>
     <script src="../../utils/switch-page.js"></script>
     <script src="../../utils/show-hide.js"></script>
 </body>
