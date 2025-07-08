@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>URL Injection (Insecure)</title>
@@ -34,4 +34,19 @@
     <script src="../../utils/switch-page.js"></script>
     <script src="./url-injection.js"></script>
 </body>
-</html> 
+</html>  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reflected XSS Example</title>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    document.write("Hello, " + name);
+  </script>
+</body>
+</html>
