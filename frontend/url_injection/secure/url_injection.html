@@ -1,9 +1,14 @@
+<!-- <?php 
+    header("Content-Security-Policy: script-src 'self' https://ajax.googleapis.com 'unsafe-eval'; object-src 'none';");
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>URL Injection (Secure)</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script>
 </head>
 <body>
     <h1 id="main_header">URL Injection (Secure)</h1>
@@ -14,13 +19,16 @@
     <p>
         URL reflection occurs when data entered by a user is displayed back on the page without proper sanitization or encoding.
     </p>
+    <p>You can send a GET request via ?name=</p>
 
-    <p>You can send a GET request via ?request=</p>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name");
+        const cleanName = DOMPurify.sanitize(name)
+        document.write("Hello, " + cleanName);
+    </script>
 
-    <p>Your request: </p>
-
-    <div id="app">
-    </div>
+    <br>
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
@@ -32,6 +40,6 @@
     <button id="switch-version">Switch to Insecure Version</button>
     <script src="../../utils/show-hide.js"></script>
     <script src="../../utils/switch-page.js"></script>
-    <script src="./url-injection.js"></script>
+    <!-- <script src="./url-injection.js"></script> -->
 </body>
 </html> 

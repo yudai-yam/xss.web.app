@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>URL Injection (Insecure)</title>
@@ -15,12 +15,16 @@
         URL reflection occurs when data entered by a user is displayed back on the page without proper sanitization or encoding.
     </p>
 
-    <p>You can send a GET request via ?request=</p>
+    <p>You can send a GET request via ?name=</p>
 
-    <p>Your request: </p>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      document.write("Hello, " + name);
+    </script>
 
-    <div id="app">
-    </div>
+    <br>
+
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
@@ -32,21 +36,6 @@
     <button id="switch-version">Switch to Secure Version</button>
     <script src="../../utils/show-hide.js"></script>
     <script src="../../utils/switch-page.js"></script>
-    <script src="./url-injection.js"></script>
+    <!-- <script src="./url-injection.js"></script> -->
 </body>
-</html>  -->
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Reflected XSS Example</title>
-</head>
-<body>
-  <h1>Welcome!</h1>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-    document.write("Hello, " + name);
-  </script>
-</body>
-</html>
+</html> 
