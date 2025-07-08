@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mXSS Demo</title>
+</head>
+<body>
+    <h2 id="title">Mutation XSS lab</h2>
+    <p>
+        <strong>What is Mutation XSS?</strong>
+    </p>
+    <p>
+        Mutated XSS happens when the attacker injects something that is seemingly safe but rewritten and modified by the browser while parsing the markup. 
+    </p>
+    <input type="text" id="userInput" placeholder="Enter HTML...">
+    <button onclick="changeContent()">Submit</button>
+
+    <div id="output"></div>
+
+    <script>
+        function changeContent() {
+            const userInput = document.getElementById("userInput").value;
+            const cleanUserInput = DOMPurify.sanitize(userInput)
+            document.getElementById("output").innerHTML = cleanUserInput;
+        }
+    </script>
+    <button id="toggle_examples">Toggle Examples</button>
+    <div id="examples">
+        <p>
+            example:&lt;body&gt;&lt;title&gt;&lt;p id=&quot;&lt;/title&gt;&lt;img src onerror=alert()&gt;&quot;&gt;&lt;/title&gt;
+        </p>
+    </div>
+
+    <button id="switch-version">Switch to Insecure Version</button>
+    <script src=" https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script>
+    <script src="../../utils/switch-page.js"></script>
+    <script src="../../utils/show-hide.js"></script>
+</body>
+</html>
+

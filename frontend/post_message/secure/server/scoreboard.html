@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>HTML5 postMessage Lab</title>
+		<meta name="description" content="The game server for a HTML5 postMessage challenge.">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8"> 
+	</head>
+	<body data-new-gr-c-s-check-loaded="8.931.0" data-gr-ext-installed="">
+		<h1>Game Server</h1>
+		<p id="login" style="display: block;">Please Login</p>
+		<p id="debug"></p>
+		<p id="welcome" style="display: none;"></p>
+		<p id="thinking" style="display: none;">I am thinking of a number, can you guess it?</p>
+
+		<p id="score_block">Current Score: <span id="score">0</span></p>
+
+		<p id="wrong"></p>
+		<p id="reset">New game started.</p>
+
+		<p id="results"></p>
+
+		<hr>
+
+        <script src="./config.js"></script>
+        <script src="./game.js"></script>
+	</body>
+</html>
