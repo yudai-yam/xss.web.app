@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "advanced_xss_web_app"
+name = "xss_lab"
 version = "0.1.0"
 authors = [
     {name="Yudai Yamase"}
@@ -16,16 +16,12 @@ classifiers = [
 ]
 dependencies = [
     "python-dotenv==1.0.1",
-    "Jinja2==3.1.6",
-    "sphinx==8.1.3",
     "fastapi==0.115.12",
     "uvicorn==0.34.2",
 ]
 
 [project.scripts]
-extract = "extract.main:extract"
-build = "data_catalog.catalog_builder.main:build"
-dev = "data_catalog.main:dev"
+dev = "xss_lab.main:dev"
 
 
 [project.urls]  # Optional
@@ -39,10 +35,10 @@ extract = [
     "oracledb==2.4.1",
 ]
 dev = [
-    "data_catalog[tox]",
-    "data_catalog[flake8]",
-    "data_catalog[black]",
-    "data_catalog[isort]",
+    "xss_lab[tox]",
+    "xss_lab[flake8]",
+    "xss_lab[black]",
+    "xss_lab[isort]",
 ]
 tox = [
     "tox==4.23.2",
