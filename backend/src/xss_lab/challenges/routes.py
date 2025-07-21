@@ -11,4 +11,4 @@ async def input_reflection(
     """
     Challenge to reflect user input back to them.
     """
-    return {"reflected_input": input}
+    return {"reflected_input": input + "prefix"}

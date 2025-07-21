@@ -3,6 +3,7 @@ import uvicorn
 import logging
 from xss_lab.conf import settings
 from xss_lab.challenges.routes import router as challange_router
+from fastapi.middleware.cors import CORSMiddleware
 
 
 # Set up the logger
@@ -15,6 +16,16 @@ logger = logging.getLogger(__name__)
 app = FastAPI(
     root_path="/api",
 )
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 app.include_router(challange_router)
 
