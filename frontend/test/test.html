@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gadget XSS Demo</title>
+</head>
+<body>
+    <h2>Gadget-Based XSS Demo </h2>
+
+    <!-- Input section -->
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="setNameParam()">Set Name</button>
+
+    <!-- Injection goes here -->
+    <div id="user" data-info=""></div>
+
+    <button onclick="loadProfile()">Load Profile</button>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const input = params.get("name") || "";
+
+        document.getElementById("user").setAttribute("data-info", input);
+
+        function fakeSanitizer(input) {
+            return input.replace(/<script.*?>.*?<\/script>/gi, '');
+        }
+
+        function loadProfile() {
+            console.log("Loading profile with input:", input);
+            const el = document.getElementById("user");
+            const data = el.getAttribute("data-info");
+
+            const sanitized = fakeSanitizer(data);
+            const gadget = { handler: sanitized };
+
+            // Final execution sink
+            const fn = new Function("console.log('Executing gadget...');" + gadget.handler);
+            fn();
+        }
+
+        function setNameParam() {
+            const name = document.getElementById('nameInput').value;
+            const url = new URL(window.location);
+            url.searchParams.set('name', name);
+            window.location = url;
+        }
+    </script>
+</body>
+</html>

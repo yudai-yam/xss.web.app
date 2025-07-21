@@ -58,9 +58,8 @@ function send_message(message) {
 	if (window_ref.closed) {
 		return;
 	}
-
-	// window_ref.postMessage(message, "*");
-	window_ref.postMessage(message, RECEIVE_URL);
+	const cleanMessage = DOMPurify.sanitize(message);
+	window_ref.postMessage(cleanMessage, RECEIVE_URL);
 }
 
 function start_game() {
