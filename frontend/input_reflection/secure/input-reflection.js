@@ -12,7 +12,7 @@ async function sendInput() {
     console.log(backend)
 
     try {
-        const response = await fetch(`${backend}/input_reflection/${encodedInput}`, {
+        const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
             method: 'POST',
     });
 

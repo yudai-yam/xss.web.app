@@ -34,7 +34,7 @@ Make sure your current path is under the frontend directory.
 
     .. code-block::
 
-        php -S 127.0.0.1:8000
+        php -S 127.0.0.1:5000
 
 - Polymer:
 
