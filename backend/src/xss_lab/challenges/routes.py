@@ -11,7 +11,7 @@ async def input_reflection(
     """
     Challenge to reflect user input back to them.
     """
-    return {"reflected_input": input + "prefix"}
+    return {"reflected_input": input}
 
 @router.post("/dom_clobbering/{input:path}", status_code=status.HTTP_200_OK)
 async def input_reflection(

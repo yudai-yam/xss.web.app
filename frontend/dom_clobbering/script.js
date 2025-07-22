@@ -6,7 +6,7 @@ async function sendInput(optionalInput) {
     let backend = await getConfigValue("backend");
 
     try {
-        const response = await fetch(`${backend}/api/dom_clobbering/${encodedInput}`, {
+        const response = await fetch(`${backend}/dom_clobbering/${encodedInput}`, {
             method: 'POST',
         });
         
@@ -25,7 +25,7 @@ function inject() {
 
     // Simulated vulnerable code using eval
     try {
-        console.log("Evaluating: ", '' + window.test1?.test2);
+        console.log("Evaluating: ", '' + window.test1.test2);
         eval('' + window.test1?.test2); // This will trigger alert if clobbered
     } catch (e) {
         console.error("Eval failed:", e);
