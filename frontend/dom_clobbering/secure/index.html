@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Clobbering Injection Demo</title>
+</head>
+<body>
+    <h1 id="main_header">DOM Clobbering</h1>
+
+    <!-- works only in chromimium -->
+
+    <h2>Enter HTML:</h2>
+    <textarea id="userInput" rows="6" cols="80">
+    <!-- Paste payload like: <a id="test1"></a><a id="test1" name="test2" href="javascript:alert('Clobbered!')"></a> -->
+    </textarea><br>
+    <button onclick="inject()">Inject HTML</button>
+
+    <div id="output"></div>
+    <button id="switch-version">Switch to Insecure Version</button>
+    <script src="../../utils/read_config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="../../utils/switch-page.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@ Advanced XSS Web Application Readme (Frontend)
 
 Note
 ----
-This repository is currently work in progress
+This repository is currently work in progress.
 
 Procedure
 ---------
@@ -34,7 +34,7 @@ Make sure your current path is under the frontend directory.
 
     .. code-block::
 
-        php -S 127.0.0.1:8000
+        php -S 127.0.0.1:5000
 
 - Polymer:
 
@@ -74,3 +74,16 @@ Polymer Camel Case Conversion Gadget
 JQuery Element Creation Gadget
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * It exploits an element creation gadget in JQuery
+
+Post Message XSS
+^^^^^^^^^^^^^^^^
+* It exploits a malconfigured postMessage function.
+
+MutationXSS
+^^^^^^^^^^^
+* It exploits the behavior of the feature that mutates the code when parsing.
+
+DOM Clobbering
+^^^^^^^^^^^^^^
+* It confuseds a web app by making use of attribute names that matches another legitimate attributes.
+* It works in Chrome, Chromium, but not in Firefox.

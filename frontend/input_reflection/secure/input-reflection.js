@@ -1,8 +1,3 @@
-/*
-simple javascript injection in innerHTML vulnerability example: <img src="x" onerror="alert('XSS')"> */ // document.getElementById("submit").onclick = function(){ //     var username = document.getElementById("input").value;
-//     var cleanUsername = DOMPurify.sanitize(username)
-//     document.getElementById("target").innerHTML = cleanUsername
-// }
 async function sendInput() {
     const input = document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
@@ -12,12 +7,13 @@ async function sendInput() {
     console.log(backend)
 
     try {
-        const response = await fetch(`${backend}/input_reflection/${encodedInput}`, {
+        const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
             method: 'POST',
     });
 
     const data = await response.json();
-        document.getElementById("result").innerText = "Reflected: " + data.reflected_input;
+    const clean_data = DOMPurify.sanitize(data.reflected_input)
+        document.getElementById("result").innerText = clean_data;
     } catch (error) {
         document.getElementById("result").innerText = "Error: " + error;
     }
