@@ -85,5 +85,5 @@ MutationXSS
 
 DOM Clobbering
 ^^^^^^^^^^^^^^
-* It confuseds a web app by making use of attribute names that matches another legitimate attributes.
+* It confuses a web app by making use of attribute names that matches another legitimate attributes.
 * It works in Chrome, Chromium, but not in Firefox.
