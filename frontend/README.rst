@@ -6,7 +6,7 @@ Advanced XSS Web Application Readme (Frontend)
 
 Note
 ----
-This repository is currently work in progress
+This repository is currently work in progress.
 
 Procedure
 ---------
