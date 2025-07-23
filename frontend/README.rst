@@ -74,3 +74,16 @@ Polymer Camel Case Conversion Gadget
 JQuery Element Creation Gadget
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * It exploits an element creation gadget in JQuery
+
+Post Message XSS
+^^^^^^^^^^^^^^^^
+* It exploits a malconfigured postMessage function.
+
+MutationXSS
+^^^^^^^^^^^
+* It exploits the behavior of the feature that mutates the code when parsing.
+
+DOM Clobbering
+^^^^^^^^^^^^^^
+* It confuseds a web app by making use of attribute names that matches another legitimate attributes.
+* It works in Chrome, Chromium, but not in Firefox.
