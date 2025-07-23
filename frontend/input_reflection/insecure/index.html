@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Input Relection (Secure)</title>
+    <title>Input Relection (Insecure)</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1 id="main_header">Input Reflection</h1>
+    <h1 id="main_header">Input Reflection (Insecure)</h1>
     <p>You might be able to discover some secrets...</p>
     <p>
         <strong>What is input reflection?</strong>
@@ -17,7 +17,7 @@
 
     <div>
         <label>username: </label>
-        <input id="input" type="text">
+        <input id="input">
         <button id="submit" onclick="sendInput()">Submit</button>
     </div>
 
@@ -30,11 +30,11 @@
             example: &lt;img src="x" onerror="alert('XSS')"&gt;
         </p>
     </div>
-    <button id="switch-version">Switch to Insecure Version</button>
+    <button id="switch-version">Switch to Secure Version</button>
     <script src="../../utils/read_config.js"></script>
     <script src="../../utils/show-hide.js"></script>
     <script src="../../utils/switch-page.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
-    <script src="./input-reflection.js"></script>
+    <!-- <script src=" https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script> -->
+    <script src="./script.js"></script>
 </body>
 </html> 
