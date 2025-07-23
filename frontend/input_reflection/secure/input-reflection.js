@@ -12,7 +12,8 @@ async function sendInput() {
     });
 
     const data = await response.json();
-        document.getElementById("result").innerText = data.reflected_input;
+    const clean_data = DOMPurify.sanitize(data.reflected_input)
+        document.getElementById("result").innerText = clean_data;
     } catch (error) {
         document.getElementById("result").innerText = "Error: " + error;
     }

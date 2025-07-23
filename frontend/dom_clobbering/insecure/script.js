@@ -25,8 +25,8 @@ function inject() {
 
     // Simulated vulnerable code using eval
     try {
-        console.log("Evaluating: ", '' + window.test1.test2);
-        eval('' + window.test1?.test2); // This will trigger alert if clobbered
+        const data = window.test1.test2
+        eval('' + data); // This will trigger alert if clobbered
     } catch (e) {
         console.error("Eval failed:", e);
     }
