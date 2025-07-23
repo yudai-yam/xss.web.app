@@ -12,7 +12,7 @@ async function sendInput() {
     });
 
     const data = await response.json();
-        document.getElementById("result").innerText = "Reflected: " + data.reflected_input;
+        document.getElementById("result").innerText = data.reflected_input;
     } catch (error) {
         document.getElementById("result").innerText = "Error: " + error;
     }
