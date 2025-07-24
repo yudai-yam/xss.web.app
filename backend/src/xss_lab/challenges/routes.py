@@ -22,3 +22,12 @@ async def input_reflection(
     """
     return {"reflected_input": input}
 
+
+@router.get("/url_injection/{input}", status_code=status.HTTP_200_OK)
+async def input_reflection(
+    input: str, 
+):
+    """
+    Challenge to reflect user input back to them.
+    """
+    return {"reflected_input": input}

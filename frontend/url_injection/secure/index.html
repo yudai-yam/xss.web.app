@@ -9,6 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js "></script>
+    <script src="../../utils/read_config.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body>
     <h1 id="main_header">URL Injection (Secure)</h1>
@@ -23,12 +25,14 @@
 
     <script>
         const params = new URLSearchParams(window.location.search);
-        const name = params.get("name");
-        const cleanName = DOMPurify.sanitize(name)
-        document.write("Hello, " + cleanName);
+        const input = params.get("name");
+        const cleanInput = DOMPurify.sanitize(input)
+        sendInput(cleanInput)
     </script>
 
     <br>
+    <h3>your input: </h3>
+    <p id="result"></p>
 
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">

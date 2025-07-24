@@ -31,9 +31,6 @@ dev = "xss_lab.main:dev"
 readme = {file = ["README.rst"]}
 
 [project.optional-dependencies]
-extract = [
-    "oracledb==2.4.1",
-]
 dev = [
     "xss_lab[tox]",
     "xss_lab[flake8]",
