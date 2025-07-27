@@ -22,11 +22,7 @@ function inject() {
     const html = document.getElementById('userInput').value;
     sendInput(html)
 
-    try {
-        const data = window.test1.test2
-        const clean_data = DOMPurify.sanitize(data)
-        eval('' + clean_data);
-    } catch (e) {
-        console.error("Eval failed:", e);
-    }
+    const data = (window.globalConfig && window.globalConfig.id) || "console.log('No clobbering detected')";
+    const clean_data = DOMPurify.sanitize(data)
+    eval('' + clean_data);
 }
