@@ -24,7 +24,6 @@ async function sendInput(userInput) {
         const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
             method: 'POST',
         });
-
         const data = await response.json();
         console.log(data.reflected_input);
         document.getElementById("result").innerHTML = decodeURIComponent(data.reflected_input);
