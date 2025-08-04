@@ -8,9 +8,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     var expression = document.getElementById("expression").getAttribute("data");
-    console.log("Expression:", expression);
 
-    document.getElementById("result").innerHTML += DOMPurify.sanitize(expression);
+    document.getElementById("result").innerHTML += expression;
 });
 
 
