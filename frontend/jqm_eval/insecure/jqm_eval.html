@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JQuery Mobile Gadget (Eval)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+</head>
+<body>
+    <h1 id="main_header">JQuery Mobile Eval Gadget (Insecure)</h1>
+    <p>Make use of known gadgets in JQuery Mobile!</p>
+    <div>
+        <label>Your Input: </label>
+        <input id="input">
+        <button id="submit" onclick="sendInput()">Submit</button>
+    </div>
+
+    <h3>your input: </h3>
+    <p id="result"></p>
+
+    <button id="toggle_examples">Toggle Examples</button>
+    <div id="examples">
+        <p>hint: You can put anything with id=expression and attribute=data</p>
+        <p>example: &lt;div id="expression" data="alert(1)"&gt;&lt;/div&gt;</p>
+        <p>note: you might need to encode it</p>
+    </div>
+    <button id="switch-version">Switch to Secure Version</button>
+    <script src="../../utils/read_config.js"></script>
+    <script src="../../utils/switch-page.js"></script>
+    <script src="../../utils/show-hide.js"></script>
+    <script src="./jqm-eval.js"></script>
+</body>
+</html>

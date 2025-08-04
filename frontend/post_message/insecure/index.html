@@ -17,11 +17,6 @@
 			or sanitizing the message content, allowing attackers to execute malicious scripts.
 		</p>
 
-		<h2>Hints</h2>
-		<div>
-			<ol id="hints"></ol>
-			<input id="addHint" type="button" value="Next Hint">
-		</div>
 		<hr>
 		<div id="set_username">
 			<label for="username">Enter your username:</label>
@@ -40,12 +35,20 @@
 				<input type="button" id="checkGuess" value="Check it">
 			</p>
 		</div>
-
 		<hr>
+		<button id="toggle_examples">Toggle Examples</button>
+		<div id="examples">
+			<p>
+				<code>send_message("user:this is &lt;b&gt;bold&lt;/b&gt;")</code><br>
+				<code>send_message("user:&lt;img src='x' onerror='alert(&quot;xss&quot;)' /&gt;")</code><br>
+				<code>send_message('user:&lt;img src="x" onerror="alert(secret)"&gt;')</code>
+			</p>
+		</div>
+
     	<button id="switch-version">Switch to Secure Version</button>
 		<script src="./config.js"></script>
+    	<script src="../../utils/show-hide.js"></script>
 		<script src="./main.js"></script>
-		<script src="./hints.js"></script>
     	<script src="../../utils/switch-page.js"></script>
 	</body>
 </html>
