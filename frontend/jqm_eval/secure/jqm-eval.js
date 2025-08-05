@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     var expression = document.getElementById("expression").getAttribute("data");
-
-    document.getElementById("result").innerHTML += expression;
+    var parsed = eval(expression);
+    document.getElementById("result").innerHTML += '<p>' + parsed + '</p>';
 });
 
 
