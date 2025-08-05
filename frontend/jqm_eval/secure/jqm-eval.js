@@ -20,7 +20,7 @@ async function sendInput(userInput) {
     let backend = await getConfigValue("backend");
 
     try {
-        const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
+        const response = await fetch(`${backend}/api/jqm_eval/secure/${encodedInput}`, {
             method: 'POST',
         });
         const data = await response.json();
