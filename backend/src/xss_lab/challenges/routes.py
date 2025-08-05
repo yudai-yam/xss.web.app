@@ -31,3 +31,23 @@ async def input_reflection(
     Challenge to reflect user input back to them.
     """
     return {"reflected_input": input}
+
+
+@router.post("/jqm_eval/{input:path}", status_code=status.HTTP_200_OK)
+async def input_reflection(
+    input: str, 
+):
+    """
+    Challenge to reflect user input back to them.
+    """
+    return {"reflected_input": input}
+
+
+@router.post("/mxss/{input:path}", status_code=status.HTTP_200_OK)
+async def input_reflection(
+    input: str, 
+):
+    """
+    Challenge to reflect user input back to them.
+    """
+    return {"reflected_input": input}
