@@ -14,16 +14,10 @@
         Mutated XSS happens when the attacker injects something that is seemingly safe but rewritten and modified by the browser while parsing the markup. 
     </p>
     <input type="text" id="userInput" placeholder="Enter HTML...">
-    <button onclick="changeContent()">Submit</button>
+    <button onclick="sendInput()">Submit</button>
 
     <div id="output"></div>
 
-    <script>
-        function changeContent() {
-            const userInput = document.getElementById("userInput").value;
-            document.getElementById("output").innerHTML = userInput;
-        }
-    </script>
     <button id="toggle_examples">Toggle Examples</button>
     <div id="examples">
         <p>
@@ -32,7 +26,9 @@
     </div>
 
     <button id="switch-version">Switch to Secure Version</button>
+    <script src="../../utils/read_config.js"></script>
     <script src="../../utils/switch-page.js"></script>
     <script src="../../utils/show-hide.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
