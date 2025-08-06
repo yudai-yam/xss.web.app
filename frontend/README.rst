@@ -35,6 +35,8 @@ Make sure your current path is under the frontend directory.
     .. code-block::
 
         php -S 127.0.0.1:5000
+        OR
+        python -m http.server 5000
 
 - Polymer:
 
@@ -62,7 +64,7 @@ JQuery Mobile Gadget (Eval)
 JQuery Mobile Gadget (Popup)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * It makes use of the known popup gadget in JQuery Mobile.
-* It works in JQuery Mobile version <= 1.3.2.  
+* It works in JQuery Mobile version <= 1.3.2. 
 
 Polymer Camel Case Conversion Gadget 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -73,7 +75,7 @@ Post Message XSS
 ^^^^^^^^^^^^^^^^
 * It exploits a malconfigured postMessage function.
 
-MutationXSS
+Mutation XSS
 ^^^^^^^^^^^
 * It exploits the behavior of the feature that mutates the code when parsing.
 
