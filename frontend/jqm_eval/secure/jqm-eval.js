@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 
     var expression = document.getElementById("expression").getAttribute("data");
-
-    document.getElementById("result").innerHTML += expression;
+    var parsed = eval(expression);
+    document.getElementById("result").innerHTML += '<p>' + parsed + '</p>';
 });
 
 
@@ -20,7 +20,7 @@ async function sendInput(userInput) {
     let backend = await getConfigValue("backend");
 
     try {
-        const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
+        const response = await fetch(`${backend}/api/jqm_eval/secure/${encodedInput}`, {
             method: 'POST',
         });
         const data = await response.json();

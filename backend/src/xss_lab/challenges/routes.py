@@ -1,10 +1,32 @@
 from fastapi import APIRouter
 from starlette import status
+from fastapi.responses import JSONResponse
 
 router = APIRouter(tags=["challenges"])
 
+allowed_post = [
+    "input_reflection",
+    "dom_clobbering",
+    "mxss"
+    ]
 
-@router.post("/input_reflection/{input:path}", status_code=status.HTTP_200_OK)
+@router.post("/{challenge_type}/{input:path}", status_code=status.HTTP_200_OK)
+async def input_reflection(
+    challenge_type: str,
+    input: str, 
+):
+    """
+    Challenge to reflect user input back to them.
+    """
+    if challenge_type not in allowed_post:
+        return JSONResponse(
+            status_code=status.HTTP_404_NOT_FOUND,
+            content={"detail": "Invalid challenge type."},
+        )
+    return {"reflected_input": input}
+
+
+@router.post("/jqm_eval/insecure/{input:path}", status_code=status.HTTP_200_OK)
 async def input_reflection(
     input: str, 
 ):
@@ -13,7 +35,8 @@ async def input_reflection(
     """
     return {"reflected_input": input}
 
-@router.post("/dom_clobbering/{input:path}", status_code=status.HTTP_200_OK)
+
+@router.post("/jqm_eval/secure/{input}", status_code=status.HTTP_200_OK)
 async def input_reflection(
     input: str, 
 ):
