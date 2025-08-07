@@ -28,7 +28,8 @@
         <p>note: you might need to encode it</p>
     </div>
 
-    <script src="../utils/show-hide.js"></script>
-    <script src="./eval-gadget.js"></script>
+    <script src="../../../utils/show-hide.js"></script>
+    <script src="../../../utils/read_config.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
