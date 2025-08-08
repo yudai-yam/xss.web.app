@@ -4,6 +4,15 @@ console.log("Extracted payload:", ref);
 console.log("Decoded payload:", decodeURIComponent(ref));
 document.getElementById("result").innerHTML = decodeURIComponent(ref);
 
+function simulateJQueryMobileProcessing() {
+    const popups = document.querySelectorAll('[data-role="popup"]');
+    console.log("hi")
+    popups.forEach(el => {
+        console.log(el)
+        el.insertAdjacentHTML('beforebegin', `<!--${el.id}-->`);
+    });
+}
+
 async function sendInput() {
     const input = document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
@@ -19,7 +28,9 @@ async function sendInput() {
 
     const data = await response.json();
         received_data = data.reflected_input
-        document.getElementById("result").innerHTML = decodeURIComponent(received_data);
+        console.log(received_data)
+        document.getElementById("result").innerHTML = received_data;
+        simulateJQueryMobileProcessing()
     } catch (error) {
         document.getElementById("result").innerHTML = "Error: " + error;
     }
