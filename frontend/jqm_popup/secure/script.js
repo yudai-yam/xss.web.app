@@ -17,7 +17,6 @@ async function sendInput() {
     console.log(encodedInput)
 
     let backend = await getConfigValue("backend")
-    console.log(backend)
 
     try {
         const response = await fetch(`${backend}/api/jqm_popup/${encodedInput}`, {
@@ -26,7 +25,6 @@ async function sendInput() {
 
     const data = await response.json();
         received_data = data.reflected_input
-        console.log(received_data)
         document.getElementById("result").innerHTML = received_data;
         simulateJQueryMobileProcessing()
     } catch (error) {

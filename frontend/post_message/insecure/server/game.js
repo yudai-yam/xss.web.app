@@ -38,6 +38,8 @@ function receiveMessage(e) {
 
 	var re = /^([^:]*):(.*)/
 	var matches = re.exec(e.data)
+	console.log("received msg")
+	console.log(e.data)
 	if (matches !== null && matches.length > 0) {
 		const command = matches[1];
 		const argument = matches[2];
@@ -54,6 +56,7 @@ function receiveMessage(e) {
 				welcome_obj.innerHTML = "Welcome " + username;
 				break;
 			case "guess":
+				console.log("guess")
 				guesses = guesses + 1;
 				// can remove this check to allow XSS in the incorrect guess section
 				if (!isNaN(argument)) {

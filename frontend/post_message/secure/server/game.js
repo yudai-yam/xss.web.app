@@ -50,8 +50,9 @@ function receiveMessage(e) {
 				document.getElementById("welcome").style.display="block";
 				document.getElementById("score_block").style.display="block";
 				var username = argument;
+				var cleanUsername = DOMPurify.sanitize(username)
 				var welcome_obj = document.getElementById("welcome");
-				welcome_obj.innerHTML = "Welcome " + username;
+				welcome_obj.innerHTML = "Welcome " + cleanUsername;
 				break;
 			case "guess":
 				guesses = guesses + 1;

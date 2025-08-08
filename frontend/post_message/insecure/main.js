@@ -28,7 +28,6 @@ function store_username() {
 	game.style.display="inline";
 
 	start_game();
-	// have to do time out so the window can open
 	setTimeout (function () {send_username(username);}, 1000);
 
 	return false;
@@ -58,6 +57,7 @@ function send_message(message) {
 	if (window_ref.closed) {
 		return;
 	}
+	console.log("send message")
 
 	window_ref.postMessage(message, "*");
 	// window_ref.postMessage(message, RECEIVE_URL);
@@ -69,6 +69,7 @@ function start_game() {
 }
 
 function send_username(username) {
+	console.log("send username")
 	message = "user:" + html_encode(username);
 	send_message(message);
 }
