@@ -8,7 +8,9 @@ allowed_post = [
     "input_reflection",
     "dom_clobbering",
     "mxss",
-    "jqm_popup"
+    "jqm_popup",
+    "sink_eval",
+    "inputFunction",
     ]
 
 @router.post("/jqm_eval/insecure/{input:path}", status_code=status.HTTP_200_OK)
