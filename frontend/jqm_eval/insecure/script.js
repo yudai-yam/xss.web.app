@@ -2,6 +2,7 @@ var ref = document.location.href.split("?request=")[1];
 
 document.addEventListener("DOMContentLoaded", async function() { 
     var received = await sendInput(ref);
+    console.log("dom")
 
     if (received) {
         document.getElementById("result").innerHTML = decodeURIComponent(received);
@@ -15,10 +16,8 @@ document.addEventListener("DOMContentLoaded", async function() {
 async function sendInput(userInput) {
     const input = userInput || document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput);
 
     let backend = await getConfigValue("backend");
-    console.log(backend);
 
     try {
         const response = await fetch(`${backend}/api/jqm_eval/insecure/${encodedInput}`, {
