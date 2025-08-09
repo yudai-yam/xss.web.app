@@ -2,7 +2,6 @@ var ref = document.location.href.split("?request=")[1];
 
 document.addEventListener("DOMContentLoaded", async function() { 
     var received = await sendInput(ref);
-    console.log("dom")
 
     if (received) {
         document.getElementById("result").innerHTML = decodeURIComponent(received);
@@ -24,7 +23,6 @@ async function sendInput(userInput) {
             method: 'POST',
         });
         const data = await response.json();
-        console.log(data.reflected_input);
         document.getElementById("result").innerHTML = decodeURIComponent(data.reflected_input);
         return data.reflected_input;
     } catch (error) {

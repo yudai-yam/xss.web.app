@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1 id="main_header">eval() Sink Gadget</h1>
+    <h1 id="main_header">eval() Sink Gadget (Secure)</h1>
 
     <div>
         <label>username: </label>
@@ -29,6 +29,8 @@
         <p>note: you might need to encode it</p>
     </div>
 
+    <button id="switch-version">Switch to Insecure Version</button>
+    <script src="../../../utils/switch-page.js"></script>
     <script src="../../../utils/show-hide.js"></script>
     <script src="../../../utils/read_config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
