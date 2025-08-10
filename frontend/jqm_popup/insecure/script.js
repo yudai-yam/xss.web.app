@@ -1,14 +1,9 @@
 var ref = document.location.href.split("?request=")[1];
-console.log("Raw URL:", document.location.href);
-console.log("Extracted payload:", ref);
-console.log("Decoded payload:", decodeURIComponent(ref));
 document.getElementById("result").innerHTML = decodeURIComponent(ref);
 
 function simulateJQueryMobileProcessing() {
     const popups = document.querySelectorAll('[data-role="popup"]');
-    console.log("hi")
     popups.forEach(el => {
-        console.log(el)
         el.insertAdjacentHTML('beforebegin', `<!--${el.id}-->`);
     });
 }
@@ -16,10 +11,8 @@ function simulateJQueryMobileProcessing() {
 async function sendInput() {
     const input = document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput)
 
     let backend = await getConfigValue("backend")
-    console.log(backend)
 
     try {
         const response = await fetch(`${backend}/api/jqm_popup/${encodedInput}`, {
@@ -28,7 +21,6 @@ async function sendInput() {
 
     const data = await response.json();
         received_data = data.reflected_input
-        console.log(received_data)
         document.getElementById("result").innerHTML = received_data;
         simulateJQueryMobileProcessing()
     } catch (error) {

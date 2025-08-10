@@ -60,7 +60,6 @@ function send_message(message) {
 	console.log("send message")
 
 	window_ref.postMessage(message, "*");
-	// window_ref.postMessage(message, RECEIVE_URL);
 }
 
 function start_game() {

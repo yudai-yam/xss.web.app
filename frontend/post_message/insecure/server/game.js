@@ -105,6 +105,4 @@ function update_debug() {
 	}
 }
 
-// Setup an event listener that calls receiveMessage() when the window
-// receives a new MessageEvent.
 window.addEventListener('message', receiveMessage);

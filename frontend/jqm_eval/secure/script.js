@@ -24,7 +24,6 @@ async function sendInput(userInput) {
             method: 'POST',
         });
         const data = await response.json();
-        console.log(data.reflected_input);
         const decodedInput = decodeURIComponent(data.reflected_input);
         document.getElementById("result").innerHTML = decodedInput;
         return data.reflected_input;

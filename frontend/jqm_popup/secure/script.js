@@ -1,7 +1,4 @@
 var ref = document.location.href.split("?request=")[1];
-console.log("Raw URL:", document.location.href);
-console.log("Extracted payload:", ref);
-console.log("Decoded payload:", decodeURIComponent(ref));
 document.getElementById("result").innerHTML = decodeURIComponent(ref);
 
 function simulateJQueryMobileProcessing() {
@@ -14,7 +11,6 @@ function simulateJQueryMobileProcessing() {
 async function sendInput() {
     const input = document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput)
 
     let backend = await getConfigValue("backend")
 

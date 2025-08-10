@@ -1,10 +1,8 @@
 async function sendInput() {
     const input = document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput)
 
     let backend = await getConfigValue("backend")
-    console.log(backend)
 
     try {
         const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
