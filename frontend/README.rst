@@ -23,27 +23,17 @@ Run the command below to install the dependencies.
 
 Server Setups
 ^^^^^^^^^^^^^
-Different server is required for each different framework to work properly.
 Make sure your current path is under the frontend directory.
 
 .. code-block::
 
     cd frontend
 
-- No Framework:
 
-    .. code-block::
+.. code-block::
 
-        php -S 127.0.0.1:5000
-        OR
-        python -m http.server 5000
+    php -S 127.0.0.1:5000 router.php
 
-- Polymer:
-
-    .. code-block::
-
-        polymer serve -H 127.0.0.1 -p 8001
- 
 
 Challenges
 ----------
@@ -66,12 +56,7 @@ JQuery Mobile Gadget (Popup)
 * It makes use of the known popup gadget in JQuery Mobile.
 * It works in JQuery Mobile version <= 1.3.2. 
 
-Polymer Camel Case Conversion Gadget 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* It exploits the camel case conversion feature implemented in Polymer framework by default.
-* This page is run on Polymer server in another port. 
-
-Post Message XSS
+postMessage XSS
 ^^^^^^^^^^^^^^^^
 * It exploits a malconfigured postMessage function.
 

@@ -21,7 +21,6 @@ function getParameterByName(name, url) {
 
 function start_new_game() {
 	secret = Math.floor(Math.random() * 10) + 1;
-	// secret = 1;
 	guesses = 0;
 	document.getElementById('reset').style.display = "block";
 	update_debug();
@@ -50,12 +49,12 @@ function receiveMessage(e) {
 				document.getElementById("welcome").style.display="block";
 				document.getElementById("score_block").style.display="block";
 				var username = argument;
+				var cleanUsername = DOMPurify.sanitize(username)
 				var welcome_obj = document.getElementById("welcome");
-				welcome_obj.innerHTML = "Welcome " + username;
+				welcome_obj.innerHTML = "Welcome " + cleanUsername;
 				break;
 			case "guess":
 				guesses = guesses + 1;
-				// can remove this check to allow XSS in the incorrect guess section
 				if (!isNaN(argument)) {
 					const guess=argument;
 
@@ -102,6 +101,4 @@ function update_debug() {
 	}
 }
 
-// Setup an event listener that calls receiveMessage() when the window
-// receives a new MessageEvent.
 window.addEventListener('message', receiveMessage);

@@ -1,13 +1,12 @@
 async function sendInput(optionalInput) {
     const input = optionalInput ?? document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log("Encoded input:", encodedInput);
 
     let backend = await getConfigValue("backend");
 
     try {
         const response = await fetch(`${backend}/dom_clobbering/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
         });
         
         const data = await response.json();

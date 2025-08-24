@@ -1,14 +1,12 @@
 async function sendInput() {
     const input = document.getElementById("userInput").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput)
 
     let backend = await getConfigValue("backend")
-    console.log(backend)
 
     try {
         const response = await fetch(`${backend}/api/mxss/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
     });
 
     const data = await response.json();

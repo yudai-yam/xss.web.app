@@ -15,17 +15,14 @@ document.addEventListener("DOMContentLoaded", async function() {
 async function sendInput(userInput) {
     const input = userInput || document.getElementById("input").value;
     const encodedInput = encodeURIComponent(input);
-    console.log(encodedInput);
 
     let backend = await getConfigValue("backend");
-    console.log(backend);
 
     try {
         const response = await fetch(`${backend}/api/jqm_eval/insecure/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
         });
         const data = await response.json();
-        console.log(data.reflected_input);
         document.getElementById("result").innerHTML = decodeURIComponent(data.reflected_input);
         return data.reflected_input;
     } catch (error) {

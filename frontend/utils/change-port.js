@@ -1,10 +1,3 @@
-/**
- * Utility function to change the port 
- * No package - 8000
- * Polymer - 8001
- * 
- * @param {string} newPort - The new port number to change to
- */
 export function changePort(newPort) {
 
     const url = new URL(window.location.href)
