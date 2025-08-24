@@ -6,7 +6,7 @@ async function sendInput(optionalInput) {
 
     try {
         const response = await fetch(`${backend}/dom_clobbering/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
         });
         
         const data = await response.json();

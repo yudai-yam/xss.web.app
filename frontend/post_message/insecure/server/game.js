@@ -4,7 +4,6 @@ var guesses = 0;
 var score = 0;
 var debug = false;
 
-// Could use referer to get this but passing it guarantees that it comes through
 origin = getParameterByName("origin");
 
 function getParameterByName(name, url) {
@@ -21,7 +20,6 @@ function getParameterByName(name, url) {
 
 function start_new_game() {
 	secret = Math.floor(Math.random() * 10) + 1;
-	// secret = 1;
 	guesses = 0;
 	document.getElementById('reset').style.display = "block";
 	update_debug();
@@ -58,7 +56,6 @@ function receiveMessage(e) {
 			case "guess":
 				console.log("guess")
 				guesses = guesses + 1;
-				// can remove this check to allow XSS in the incorrect guess section
 				if (!isNaN(argument)) {
 					const guess=argument;
 

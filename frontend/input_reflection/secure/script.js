@@ -6,7 +6,7 @@ async function sendInput() {
 
     try {
         const response = await fetch(`${backend}/api/input_reflection/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
     });
 
     const data = await response.json();

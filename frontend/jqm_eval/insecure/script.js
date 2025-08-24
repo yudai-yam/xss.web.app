@@ -20,7 +20,7 @@ async function sendInput(userInput) {
 
     try {
         const response = await fetch(`${backend}/api/jqm_eval/insecure/${encodedInput}`, {
-            method: 'POST',
+            method: 'GET',
         });
         const data = await response.json();
         document.getElementById("result").innerHTML = decodeURIComponent(data.reflected_input);
