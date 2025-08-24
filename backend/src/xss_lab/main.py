@@ -6,7 +6,6 @@ from xss_lab.challenges.routes import router as challange_router
 from fastapi.middleware.cors import CORSMiddleware
 
 
-# Set up the logger
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
