@@ -1,12 +1,23 @@
-var ref = document.location.href.split("?request=")[1];
-document.getElementById("result").innerHTML = decodeURIComponent(ref);
-
-function simulateJQueryMobileProcessing() {
-    const popups = document.querySelectorAll('[data-role="popup"]');
-    popups.forEach(el => {
-        el.insertAdjacentHTML('beforebegin', `<!--${encodeURIComponent(el.id)}-->`);
-    });
+function simulateJQueryMobileProcessing(input) {
+    const el = document.createElement("div");
+    document.body.appendChild(el);
+    id = getPopupIdFromString(input)
+    encoded_id = encodeURIComponent(id)
+    console.log(id)
+    el.insertAdjacentHTML('beforebegin', `<!--${encoded_id}-->`);
 }
+
+
+function getPopupIdFromString(html) {
+    const temp = document.createElement("div");
+    temp.innerHTML = html.trim();
+    const el = temp.firstChild;
+    if (el.getAttribute("data-role") === "popup") {
+        return el.id;
+    }
+    return null;
+}
+
 
 async function sendInput() {
     const input = document.getElementById("input").value;
@@ -21,8 +32,7 @@ async function sendInput() {
 
     const data = await response.json();
         received_data = data.reflected_input
-        document.getElementById("result").innerHTML = received_data;
-        simulateJQueryMobileProcessing()
+        simulateJQueryMobileProcessing(received_data) 
     } catch (error) {
         document.getElementById("result").innerHTML = "Error: " + error;
     }
