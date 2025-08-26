@@ -6,6 +6,6 @@
   "author": "Yudai Yamase",
   "dependencies": {},
   "scripts": {
-    "postinstall": "cd start-polymer3 && npm install"
+    "postinstall": "npm install"
   }
 }

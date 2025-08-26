@@ -4,11 +4,6 @@ Advanced XSS Web Application Readme
 .. contents:: :local:
 
 
-Note
-----
-This repository is currently work in progress
-
-
 Background
 ----------
 This repository stores the whole architecture for a web application tailored for
@@ -25,9 +20,9 @@ the web applicaiton is shown in the image below.
 
 Frontend
 ^^^^^^^^
-It consists of HTML, CSS, and JavaScript files that provide the user interface for the application.
+It consists of HTML and JavaScript files that provide the user interface for the application.
 
 Backend
 ^^^^^^^
 It processes the requests from the frontend and serves the necessary data.
-It is built for the sake of completeness, but it does not play much role in this project.
+It is built for the sake of completeness, but it is not high of an importance in this project.
