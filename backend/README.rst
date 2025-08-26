@@ -4,10 +4,6 @@ Advanced XSS Web Application Readme (Backend)
 .. contents:: :local:
 
 
-Note
-----
-This repository is currently work in progress.
-
 Procedure
 ---------
 User has to install dependency and run local servers for each framework
