@@ -2,7 +2,7 @@ if (typeof(SERVER_DOMAIN) === 'undefined') {
 	window.location.replace("/unconfigured.html");
 }
 
-const RECEIVE_URL = SERVER_DOMAIN + "/scoreboard.html" + "?origin=" + get_domain();
+const RECEIVE_URL = SERVER_DOMAIN + "/receiver.html" + "?origin=" + get_domain();
 
 var window_ref = null;
 
@@ -33,21 +33,21 @@ function store_username() {
 	return false;
 }
 
-function check_guess() {
-	var guess_obj = document.getElementById("guess");
-	var guess = guess_obj.value;
+function check_msg() {
+	var msg_obj = document.getElementById("msg");
+	var msg = msg_obj.value;
 	var res = document.getElementById("result");
-    console.log("Guess: " + guess);
+    console.log("msg: " + msg);
 
-	send_message("guess:" + guess);
+	send_message("msg:" + msg);
 
-	document.getElementById("guess").focus();
-	document.getElementById("guess").value = "";
+	document.getElementById("msg").focus();
+	document.getElementById("msg").value = "";
 }
 
 function html_encode (html) {
-	return document.createElement( 'a' ).appendChild( 
-		document.createTextNode( html ) ).parentNode.innerHTML;
+	return document.createElement('a').appendChild( 
+		document.createTextNode(html)).parentNode.innerHTML;
 }
 
 function send_message(message) {
@@ -64,7 +64,7 @@ function send_message(message) {
 
 function start_game() {
 	open_window();
-	document.getElementById("guess").focus();
+	document.getElementById("msg").focus();
 }
 
 function send_username(username) {
@@ -92,7 +92,7 @@ function open_window() {
 const usernameButton = document.getElementById("setUsername");
 usernameButton.addEventListener("click", store_username, false);
 
-const guessButton = document.getElementById("checkGuess");
-guessButton.addEventListener("click", check_guess, false);
+const msgButton = document.getElementById("checkMsg");
+msgButton.addEventListener("click", check_msg, false);
 
 start_game();
