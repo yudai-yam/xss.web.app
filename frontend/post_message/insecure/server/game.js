@@ -17,8 +17,6 @@ function getParameterByName(name, url) {
 
 function receiveMessage(e) {
 	if (e.origin != CLIENT_DOMAIN) {
-        console.log(e.origin)
-        console.log(CLIENT_DOMAIN)
 		return;
 	}
 	var results = document.getElementById("results");
@@ -46,7 +44,7 @@ function receiveMessage(e) {
 				receivedMsg_obj.innerHTML = "Received Message: " + argument;
 				break;
 			default:
-				console.log("Unknown command");
+				console.log("Command not recognized");
 		}
 	} else {
 		results.innerHTML = (new Date()).toLocaleString() + " - " + e.data + results.innerHTML;
