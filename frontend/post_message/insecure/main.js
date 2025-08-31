@@ -1,7 +1,3 @@
-if (typeof(SERVER_DOMAIN) === 'undefined') {
-	window.location.replace("/unconfigured.html");
-}
-
 const RECEIVE_URL = SERVER_DOMAIN + "/receiver.html" + "?origin=" + get_domain();
 
 var window_ref = null;
@@ -36,8 +32,6 @@ function store_username() {
 function check_msg() {
 	var msg_obj = document.getElementById("msg");
 	var msg = msg_obj.value;
-	var res = document.getElementById("result");
-    console.log("msg: " + msg);
 
 	send_message("msg:" + msg);
 
@@ -57,7 +51,6 @@ function send_message(message) {
 	if (window_ref.closed) {
 		return;
 	}
-	console.log("send message")
 
 	window_ref.postMessage(message, "*");
 }
@@ -84,7 +77,7 @@ function open_window() {
 		window_ref = window.open (RECEIVE_URL, "score board", "height=260,width=550");
 
 		if (window_ref == null) {
-			alert ("Failed to open window. You must allow pop-ups.");
+			alert ("Allow popups for this site to work.");
 		}
 	}
 }

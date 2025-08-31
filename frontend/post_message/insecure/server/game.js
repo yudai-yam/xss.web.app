@@ -22,12 +22,9 @@ function receiveMessage(e) {
 		return;
 	}
 	var results = document.getElementById("results");
-	// var score_obj = document.getElementById("score");
 
 	var re = /^([^:]*):(.*)/
 	var matches = re.exec(e.data)
-	console.log("received msg")
-	console.log(e.data)
 	if (matches !== null && matches.length > 0) {
 		const command = matches[1];
 		const argument = matches[2];
@@ -56,12 +53,5 @@ function receiveMessage(e) {
 	}
 }
 
-function update_debug() {
-	if (debug) {
-		document.getElementById('debug').innerText = 'DEBUG: The secret is: ' + secret;
-	} else {
-		document.getElementById('debug').innerText = '';
-	}
-}
 
 window.addEventListener('message', receiveMessage);
