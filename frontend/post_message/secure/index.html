@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
-		<title>HTML5 postMessage (Secure)</title>
+		<title>postMessage (Secure)</title>
   		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-		<meta name="description" content="A game to demonstrate the HTML5 postMessage() function.">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
 		<meta charset="utf-8"> 
 	</head>
 	<body data-new-gr-c-s-check-loaded="8.931.0" data-gr-ext-installed="">
-		<h1>HTML5 postMessage (Secure) - Game Client</h1>
+		<h1>HTML5 postMessage (Secure) - Sender Client</h1>
 		<p>
 			<strong>What is postMessage XSS?</strong>
 		</p>
@@ -28,21 +27,20 @@
 		<div id="game" style="display: none;">
 			<h2 id="welcome">x</h2>
 			<p>
-				I'm thinking of a number between 1 and 10, see if you can guess it.
+				You can send any messages!
 			</p>
 			<p>
 				<span id="result"></span><br>
-				<label for="guess">Guess:</label> <input value="" id="guess" name="guess">
-				<input type="button" id="checkGuess" value="Check it">
+				<label for="msg">Message:</label> <input value="" id="msg" name="msg">
+				<input type="button" id="checkMsg" value="Send Message">
 			</p>
 		</div>
-
 		<hr>
 		<button id="toggle_examples">Toggle Examples</button>
 		<div id="examples">
 			<p>
 				<code>send_message("user:this is &lt;b&gt;bold&lt;/b&gt;")</code><br>
-				<code>send_message('user:&lt;img src="x" onerror="alert(secret)"&gt;')</code>
+				<code>send_message('user:&lt;img src="x" onerror="alert()"&gt;')</code>
 			</p>
 		</div>
 
