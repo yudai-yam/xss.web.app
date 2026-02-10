@@ -17,6 +17,14 @@ It is recommended to use virtual environment.
 
 .. code-block::
 
+
+    # Create a virtual environment (if not already created)
+    python3 -m venv venv
+
+    # Activate the virtual environment
+    source venv/bin/activate
+
+    # Install dependencies
     pip install -e.[dev]
 
 
