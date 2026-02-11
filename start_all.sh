@@ -1,6 +1,8 @@
 #!/bin/bash
 # Script to set up and run backend and frontend for xss.web.app
 
+FRONTEND_HOST_PORT="127.0.0.1:5000"
+
 # Start backend setup and server in a new terminal
 gnome-terminal -- bash -c '
 cd backend
@@ -14,7 +16,7 @@ fi
 # Try common dev server commands
 echo "Starting backend dev server..."
 if command -v uvicorn &> /dev/null; then
-    uvicorn xss_lab.main:app --reload
+    dev
 else
     echo "Please start your backend dev server manually."
     bash
@@ -22,8 +24,12 @@ fi
 '
 
 # Start frontend setup and server in a new terminal
-gnome-terminal -- bash -c '
+gnome-terminal -- bash -c "
 cd frontend
 npm install
-php -S 127.0.0.1:5000 router.php
-'
+php -S $FRONTEND_HOST_PORT router.php
+"
+
+# Wait for servers to start, then open browser
+sleep 5
+xdg-open http://$FRONTEND_HOST_PORT &

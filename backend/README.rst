@@ -17,7 +17,6 @@ It is recommended to use virtual environment.
 
 .. code-block::
 
-
     # Create a virtual environment (if not already created)
     python3 -m venv venv
 
