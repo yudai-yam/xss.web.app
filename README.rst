@@ -13,7 +13,7 @@ Advanced XSS experiments.
 Architecture
 ------------
 It comprises various components. The diagram for the whole architecture of
-the web applicaiton is shown in the image below.
+the web application is shown in the image below.
 
 .. image:: images/web_app_architecture.drawio.png
     :width: 700
