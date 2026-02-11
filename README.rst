@@ -31,6 +31,7 @@ Start-up script
 ^^^^^^^^^^^^^^^
 A script named ``start_all.sh`` is provided to set up and run both the backend and frontend servers. It also opens the frontend in a web browser automatically.
 To run the script, use the following command in your terminal:
+
 .. code:: bash
 
     bash start_all.sh
