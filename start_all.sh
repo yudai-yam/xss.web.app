@@ -9,11 +9,10 @@ cd backend
 python3 -m venv venv
 source venv/bin/activate
 pip install -e.[dev]
-# Run dev server (replace with actual command if different)
+# Run dev server
 if [ -f venv/bin/activate ]; then
     source venv/bin/activate
 fi
-# Try common dev server commands
 echo "Starting backend dev server..."
 if command -v uvicorn &> /dev/null; then
     dev
