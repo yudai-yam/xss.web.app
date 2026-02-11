@@ -34,4 +34,4 @@ To run the script, use the following command in your terminal:
 
 .. code:: bash
 
-    bash start_all.sh
+    ./start_all.sh
